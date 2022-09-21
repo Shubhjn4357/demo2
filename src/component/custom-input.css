@@ -1,0 +1,98 @@
+
+
+.form-control{
+  position:relative;
+}
+.form-control label{
+  font-size:0.5rem;
+  color:var(--secondary);
+  position:absolute;
+  display:flex;
+  align-items:center;
+  left:1rem;
+  top:0.2rem;
+  transition:all 0.2s ease;
+}
+input:focus~ label,
+textarea:focus~ label,
+input:not(:placeholder-shown)~ label,
+textarea:not(:placeholder-shown)~ label{
+  top:-1rem;
+  transition:all 0.2s ease;
+}
+
+input,textarea {
+  outline: none;
+  align-items: center;
+  background: #f5f5fa;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: -10px -10px 30px 0 #fff,10px 10px 30px 0 #1d0dca17;
+  box-sizing: border-box;
+  color: #2a1f62;
+  cursor: pointer;
+  display: flex;
+  font-family: "Cascadia Code",Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
+  font-size: 0.8rem;
+  justify-content: center;
+  line-height: 0.5rem;
+  padding: 0.3rem;
+  position: relative;
+  text-align: left;
+  transition: .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: pre;
+  width: max-content;
+  word-break: normal;
+  word-spacing: normal;
+}
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  font-family: inherit;
+  font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+  display: none; 
+}
+
+
+input[type=text],
+input[type=search],
+input[type=email],
+input[type=number],
+input[type=password], {
+  background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+  border: solid 1px #ccc;
+  padding: 3px 5px 3px 8px;
+  
+  -webkit-border-radius: 10em;
+  -moz-border-radius: 10em;
+  border-radius: 10em;
+  
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s;
+}
+input[type=search]:focus,
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+input[type=password]:focus{
+  background-color:var(--white);
+  
+  -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+  -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+  box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+
+input::-moz-placeholder  {
+  color:transparent;
+}
+
+input::-webkit-input-placeholder {
+  color:transparent;
+}
